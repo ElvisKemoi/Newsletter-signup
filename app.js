@@ -15,6 +15,7 @@ app.post("/", (req, res) => {
     var firstName = req.body.fName;
     var lastName = req.body.lName;
     var email = req.body.email;
+    var phoneNumber = req.body.phone;
     var data = {
         members: [
             {
@@ -23,6 +24,7 @@ app.post("/", (req, res) => {
                 merge_fields: {
                     FNAME: firstName,
                     LNAME: lastName,
+                    PHONE: phoneNumber,
                 },
             },
         ],
